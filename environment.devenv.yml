@@ -1,0 +1,7 @@
+name: fortran-pg
+channels:
+- conda-forge
+- defaults
+dependencies:
+- python=3.9.7
+- invoke=1.6
