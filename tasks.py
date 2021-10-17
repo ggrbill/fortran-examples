@@ -24,6 +24,7 @@ def build(ctx, cclean=False):
 	commands = [
 		'mkdir build',
 		'cd build',
-		'f95 ../src/hello.f95 -o hello',
+		'f95 -c ../src/vector_math.f95 ../src/hello.f95',
+		'f95 hello.o vector_math.o -o hello',
 	]
 	ctx.run(' && '.join(commands))
